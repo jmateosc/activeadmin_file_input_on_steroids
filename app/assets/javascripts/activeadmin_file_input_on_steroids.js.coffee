@@ -6,11 +6,15 @@ $ ->
   $('.image-preview').prev().change ->
     readURL this, $(this).next()
 
-  $('.button.has_many_add').click ->
+  has_many_click $('.button.has_many_add')
+
+has_many_click = (elems) ->
+  elems.click ->
     $this = $(this)
     root.delay 10, ->
       $this.prev().find('.image-preview').prev().change ->
         readURL this, $(this).next()
+      has_many_click $this.find('.button.has_many_add')
 
 
 readURL = (input, elem) ->
