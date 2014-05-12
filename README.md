@@ -1,6 +1,6 @@
 # ActiveadminFileInputOnSteroids
 
-TODO: Write a gem description
+This gem adds 2 functionalities to the file input field. Image preview and a size hint based on paperclip styles.
 
 ## Installation
 
@@ -18,7 +18,23 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Include javascript to your active_admin.js file.
+
+```javascript
+//=  require activeadmin_file_input_on_steroids
+```
+
+Include the css to your active_admin.css.scss
+```css
+@import "activeadmin_file_input_on_steroids";
+```
+
+Now, when in your forms, when you create a file input, you have 2 new options, image_preview and size_hint.
+
+```ruby
+f.input :photo, image_preview: true, size_hint: true
+```
+
 
 ## Contributing
 
