@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["ari.shh@gmail.com"]
   spec.summary       = %q{Gem that adds functionality to activeadmin file input}
   spec.description   = %q{Adds 2 functionalities to the file input. Image preview and a size hint, that indicates the sizes generated with paperclip.}
-  spec.homepage      = ""
+  spec.homepage      = "https://github.com/arielschvartz/activeadmin_file_input_on_steroids"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")
