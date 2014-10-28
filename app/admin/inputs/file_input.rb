@@ -27,7 +27,7 @@ class FileInput < Formtastic::Inputs::FileInput
     end
 
     def size_hint_text
-      t = @object.photo.options[:styles]
+      t = @object.send(method).options[:styles]
       my_text = ''
       t.each_with_index do |k, i|
         unless i == 0
