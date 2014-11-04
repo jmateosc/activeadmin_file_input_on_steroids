@@ -19,7 +19,11 @@ class FileInput < Formtastic::Inputs::FileInput
     end
 
     def image_preview_html
-      template.image_tag(@object.send(method).url, class: "image-preview")
+      if @object.errors
+        nil
+      else
+        template.image_tag(@object.send(method).url, class: "image-preview")
+      end
     end
 
     def size_hint?
