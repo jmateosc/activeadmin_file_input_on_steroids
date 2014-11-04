@@ -3,7 +3,7 @@ root = exports ? this
 root.delay = (ms, func) -> setTimeout func, ms
 
 $ ->
-  $('.image-preview').prev().change ->
+  $('.image-preview').parents('li:first').find('input[type="file"]').change ->
     readURL this, $(this).next()
 
   has_many_click $('.button.has_many_add')
@@ -12,7 +12,7 @@ has_many_click = (elems) ->
   elems.click ->
     $this = $(this)
     root.delay 10, ->
-      $this.prev().find('.image-preview').prev().change ->
+      $this.prev().find('.image-preview').parents('li:first').find('input[type="file"]').change ->
         readURL this, $(this).next()
       has_many_click $this.find('.button.has_many_add')
 
