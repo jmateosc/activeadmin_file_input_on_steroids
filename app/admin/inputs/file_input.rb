@@ -20,7 +20,7 @@ class FileInput < Formtastic::Inputs::FileInput
 
     def image_preview_html
       if @object.errors
-        nil
+        template.image_tag(nil, class: 'image-preview')
       else
         template.image_tag(@object.send(method).url, class: "image-preview")
       end
