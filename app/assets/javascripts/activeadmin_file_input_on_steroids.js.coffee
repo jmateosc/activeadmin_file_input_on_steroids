@@ -4,7 +4,7 @@ root.delay = (ms, func) -> setTimeout func, ms
 
 $ ->
   $('.image-preview').parents('li:first').find('input[type="file"]').change ->
-    readURL this, $(this).next()
+    readURL this, $(this).parents('li:first').find('.image-preview')
 
   has_many_click $('.button.has_many_add')
 
@@ -13,7 +13,7 @@ has_many_click = (elems) ->
     $this = $(this)
     root.delay 10, ->
       $this.prev().find('.image-preview').parents('li:first').find('input[type="file"]').change ->
-        readURL this, $(this).next()
+        readURL this, $(this).parents('li:first').find('.image-preview')
       has_many_click $this.find('.button.has_many_add')
 
 
