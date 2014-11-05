@@ -1,0 +1,5 @@
+en:
+  activeadmin:
+    activeadmin_file_input_on_steroids:
+      size_hint_text: 'Sizes generated automatically (Resize, centralizes and cut) the selected image:'
+      

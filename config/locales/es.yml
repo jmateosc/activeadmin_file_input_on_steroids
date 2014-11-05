@@ -1,0 +1,5 @@
+es:
+  activeadmin:
+    activeadmin_file_input_on_steroids:
+      size_hint_text: 'Tamaños generados automáticamente (Redimensiona, centraliza y corta) la imagen seleccionada:'
+      

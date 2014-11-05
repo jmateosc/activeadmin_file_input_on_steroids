@@ -44,7 +44,7 @@ class FileInput < Formtastic::Inputs::FileInput
 
     def size_hint_html
       if size_hint?
-        template.content_tag(:p, 'Tamanhos gerados automaticamente (redimensiona, centraliza e corta) através da imagem selecionada:', class: 'size-hint-text inline-hints') +
+        template.content_tag(:p, I18n.t('activeadmin.activeadmin_file_input_on_steroids.size_hint_text'), class: 'size-hint-text inline-hints') +
         template.content_tag(:p, size_hint_text, class: 'size-hint-text inline-hints')
       else
         nil
